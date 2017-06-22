@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            position: relative;
+        }
+        .tu{
+            width:100%;
+        }
+        .cover{
+            width:100%;
+            background:rgba(0,0,0,0.5);
+            position: absolute;
+            top:0;
+            left:0;
+           display: none;
+
+        }
+        .cover>div{
+            width:80%;
+            margin:100px auto;
+            background: #fff;
+            position: relative;
+        }
+        .cover>div>a{
+            display: inline-block;
+            width:80px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            background:none;
+            font-size: 30px;
+            position: absolute;
+            right:0;
+            top:0;
+            color: #000;
+            cursor: pointer;
+            border:1px solid #000;
+            z-index: 20000000000000;
+        }
+    </style>
+</head>
+<body>
+<!--数据模式切换-->
+<select name="" id="sel">
+    <option value="table">表格</option>
+    <option value="tu">条形图</option>
+</select>
+<!--条形图-->
+<div class="tu"  style="display: none">
+    <div id="main_2" style="width:100%;height:800px;"></div>
+</div>
+<!--表格数据-->
+<table id="box" class="kv-grid-table table table-bordered table-striped kv-table-wrap">
+    <thead>
+        <tr>
+            <th class="kv-align-center kv-align-middle" style="width:3.08%;">#</th>
+            <th style="width:9.65%;">名称</th><th style="width:10.37%;">tags</th>
+            <th  style="width:4.46%;">新增人数</th><th style="width:2.77%;">DAU</th>
+            <th  style="width:4.52%;">付费人数</th><th style="width:4.52%;">付费金额</th>
+            <th  style="width:6.21%;">新增付费人数</th><th style="width:6.27%;">新增付费金额</th>
+            <th  style="width:3.74%;">付费率</th>
+            <th  style="width:3.26%;">ARPU</th>
+            <th  style="width:3.8%;">ARPPU</th>
+            <th  style="width:3.8%;">3日LTV</th>
+            <th  style="width:3.74%;">7日LTV</th>
+            <th  style="width:4.1%;">14日LTV</th>
+            <th  style="width:4.1%;">30日LTV</th>
+            <th  style="width:4.52%;">次日留存</th>
+            <th  style="width:4.16%;">3日留存</th>
+            <th  style="width:4.16%;">7日留存</th>
+            <th  style="width:4.7%;">14日留存</th>
+            <th  style="width:4.1%;">30日留存</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="kv-align-center kv-align-middle" style="width:50px;">1</td>
+            <td>官网包(Android)</td>
+            <td><span class="label label-success">官网包</span> <span class="label label-success">Android</span> <span class="label label-success">折扣</span> </td>
+            <td>1</td>
+            <td>336</td>
+            <td>12</td>
+            <td>693.6</td>
+            <td>0</td>
+            <td>0</td>
+            <td>3.57%</td>
+            <td>2.06</td>
+            <td>57.80</td>
+            <td><span class="not-set">N/A</span></td>
+            <td><span class="not-set">N/A</span></td>
+            <td><span class="not-set">N/A</span></td>
+            <td><span class="not-set">N/A</span></td>
+            <td><span class="not-set">N/A</span></td>
+            <td><span class="not-set">N/A</span></td>
+            <td><span class="not-set">N/A</span></td>
+            <td><span class="not-set">N/A</span></td>
+            <td><span class="not-set">N/A</span></td>
+        </tr>
+        <tr>
+            <td class="kv-align-center kv-align-middle" style="width:50px;">2</td>
+            <td>天赐本平台(ios)</td>
+            <td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">3</td><td>AppStore</td><td><span class="label label-success">正版包</span> <span class="label label-success">折扣</span> </td><td>206</td><td>5190</td><td>292</td><td>13285.84</td><td>13</td><td>1614.32</td><td>5.63%</td><td>2.56</td><td>45.50</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">4</td><td>同步推(ios)</td><td></td><td>0</td><td>40</td><td>5</td><td>194</td><td>0</td><td>0</td><td>12.50%</td><td>4.85</td><td>38.80</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">5</td><td>pp助手(ios)</td><td></td><td>2</td><td>48</td><td>1</td><td>6</td><td>0</td><td>0</td><td>2.08%</td><td>0.12</td><td>6.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">6</td><td>快用(ios)</td><td></td><td>3</td><td>140</td><td>7</td><td>544</td><td>1</td><td>66</td><td>5.00%</td><td>3.89</td><td>77.71</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">7</td><td>安智(andorid)</td><td></td><td>5</td><td>58</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">8</td><td>xy助手(ios)</td><td></td><td>2</td><td>37</td><td>1</td><td>6</td><td>1</td><td>6</td><td>2.70%</td><td>0.16</td><td>6.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">9</td><td>拇指玩(android)</td><td></td><td>0</td><td>10</td><td>1</td><td>60</td><td>0</td><td>0</td><td>10.00%</td><td>6.00</td><td>60.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">10</td><td>itools(android)</td><td></td><td>0</td><td>127</td><td>1</td><td>30</td><td>0</td><td>0</td><td>0.79%</td><td>0.24</td><td>30.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">11</td><td>itools(ios)</td><td></td><td>7</td><td>232</td><td>24</td><td>1752</td><td>0</td><td>0</td><td>10.34%</td><td>7.55</td><td>73.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">12</td><td>爱思(ios)</td><td></td><td>7</td><td>185</td><td>3</td><td>42</td><td>0</td><td>0</td><td>1.62%</td><td>0.23</td><td>14.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">13</td><td>海马(android)</td><td></td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">14</td><td>海马(ios)</td><td></td><td>1</td><td>19</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">15</td><td>果盘(ios)</td><td></td><td>0</td><td>74</td><td>3</td><td>120</td><td>0</td><td>0</td><td>4.05%</td><td>1.62</td><td>40.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">16</td><td>乐8(ios)</td><td></td><td>0</td><td>6</td><td>1</td><td>60</td><td>0</td><td>0</td><td>16.67%</td><td>10.00</td><td>60.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">17</td><td>淘手游(android)</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">18</td><td>小7手游(android)</td><td></td><td>8</td><td>169</td><td>19</td><td>1314</td><td>1</td><td>6</td><td>11.24%</td><td>7.78</td><td>69.16</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">19</td><td>小7手游(ios)</td><td></td><td>7</td><td>115</td><td>30</td><td>8764</td><td>2</td><td>664</td><td>26.09%</td><td>76.21</td><td>292.13</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">20</td><td>三星(android)</td><td></td><td>4</td><td>119</td><td>1</td><td>30</td><td>0</td><td>0</td><td>0.84%</td><td>0.25</td><td>30.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">21</td><td>乐嗨嗨(android)</td><td></td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">22</td><td>乐嗨嗨(ios)</td><td></td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">23</td><td>易幻(android)</td><td></td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">24</td><td>骑士(andorid)</td><td></td><td>1</td><td>28</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">25</td><td>兔兔助手(ios)</td><td></td><td>1</td><td>27</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">26</td><td>乐7(android)</td><td></td><td>2</td><td>46</td><td>1</td><td>6</td><td>0</td><td>0</td><td>2.17%</td><td>0.13</td><td>6.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">27</td><td>啪啪(android)</td><td></td><td>3</td><td>167</td><td>2</td><td>90</td><td>0</td><td>0</td><td>1.20%</td><td>0.54</td><td>45.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">28</td><td>斗鱼(android)</td><td></td><td>0</td><td>46</td><td>2</td><td>90</td><td>0</td><td>0</td><td>4.35%</td><td>1.96</td><td>45.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">29</td><td>榴莲(andorid)</td><td></td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">30</td><td>点游(android)</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">31</td><td>乐游(android)</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">32</td><td>爱应用(ios)</td><td></td><td>7</td><td>304</td><td>69</td><td>12248</td><td>0</td><td>0</td><td>22.70%</td><td>40.29</td><td>177.51</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">33</td><td>偶玩(andorid)</td><td></td><td>1</td><td>386</td><td>40</td><td>2576</td><td>0</td><td>0</td><td>10.36%</td><td>6.67</td><td>64.40</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">34</td><td>魔品(ios)</td><td></td><td>2</td><td>10</td><td>1</td><td>6</td><td>0</td><td>0</td><td>10.00%</td><td>0.60</td><td>6.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">35</td><td>游戏猫(android)</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">36</td><td>说玩(android)</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">37</td><td>57k(android)</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">38</td><td>弈玩(android)</td><td></td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">39</td><td>兔兔助手(android)</td><td></td><td>0</td><td>23</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">40</td><td>蓝光手游大师(android)</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">41</td><td>努比亚(android)</td><td></td><td>0</td><td>8</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">42</td><td>畅吧(android)</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">43</td><td>中兴(android)</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">44</td><td>17kxgame(android)</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">45</td><td>联运推广	(android)</td><td></td><td>0</td><td>5</td><td>2</td><td>24.48</td><td>0</td><td>0</td><td>40.00%</td><td>4.90</td><td>12.24</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">46</td><td>应用宝(andorid)</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">47</td><td>决战数码世界_C包</td><td><span class="label label-success">正版包</span> <span class="label label-success">折扣</span> </td><td>27</td><td>180</td><td>5</td><td>110.16</td><td>2</td><td>28.56</td><td>2.78%</td><td>0.61</td><td>22.03</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">48</td><td>G包</td><td><span class="label label-success">正版包</span> <span class="label label-success">折扣</span> </td><td>2</td><td>23</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">49</td><td>投放03(ios)</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">50</td><td>投放04(ios)</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">51</td><td>投放05(ios)</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">52</td><td>投放16(ios)</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">53</td><td>A包</td><td><span class="label label-success">正版包</span> <span class="label label-success">折扣</span> </td><td>8</td><td>559</td><td>12</td><td>299.2</td><td>0</td><td>0</td><td>2.15%</td><td>0.54</td><td>24.93</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">54</td><td>畅销榜_B包</td><td><span class="label label-success">正版包</span> <span class="label label-success">折扣</span> </td><td>3</td><td>693</td><td>29</td><td>805.12</td><td>0</td><td>0</td><td>4.18%</td><td>1.16</td><td>27.76</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">55</td><td>投放19(ios)</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">56</td><td>投放20(ios)</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">57</td><td>公会1(android)</td><td></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0.00</td><td>0.00</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr></tbody></table>
+<!--饼图-->
+<div class="cover">
+    <div>
+        <a>X</a>
+        <div id="bing" style="width:100%;height:800px;display:none"></div>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="http://cdn.bootcss.com/echarts/3.5.0/echarts.js"></script>
+<script>
+    //获取表格中的数据
+    function getTable(){
+        var mytable = document.getElementById("box");
+        var rows=mytable.rows.length;
+        var data = [];
+        var title =[];
+        for(var i=0;i<rows; i++){
+            for(var j=0,cells=mytable.rows[i].cells.length; j<cells; j++){
+                if(!data[j]){
+                    data[j] = new Array();
+                }
+                if(i==0&&j>=3){
+                    title.push(mytable.rows[i].cells[j].innerHTML);
+                }
+
+                data[j][i]= mytable.rows[i].cells[j].innerHTML;
+            }
+        }
+        return data;
+    }
+
+    //X轴数据
+    function getCname(){
+        var data=getTable();
+        var cname=data[1].slice(1,data[1].length);
+        return cname;
+    }
+    //去除百分号
+    function remove(){
+        var num=[];
+        var data=getTable();
+        for(var i=0;i<data.length;i++){
+            for(var j=0;j<data[i].length;j++){
+                if(!num[i]){
+                    num[i] = new Array();
+                }
+                num[i][j]=parseFloat(data[i][j])
+            }
+        }
+        return num;
+    }
+    //条形图数据
+    function barData(){
+        var sers=[]
+        var data=getTable();
+        var num=remove();
+        for(var i=0;i<data.length;i++){
+            if(i>=3){
+                sers.push({
+                    name:data[i][0],
+                    type:"bar",
+                    data:num[i].slice(1,num[i].length)
+                })
+            }
+        }
+        return sers;
+    }
+    //图例名称
+    function legend(){
+        var end=[];
+        var data=getTable();
+        for(var i=0;i<data.length;i++){
+            if(i>=3){
+                end.push(data[i][0])
+            }
+        }
+        return end;
+    }
+
+    // 图例选中状态
+    function legendData(){
+        var chose={};
+        var data=getTable();
+        for(var i=0;i<data.length;i++){
+            if(i>=3){
+                chose[data[i][0]]=false;
+                chose[data[3][0]]=true;
+            }
+        }
+        return chose;
+    }
+
+    //表格 统计图切换
+    $("#sel").on("change",function(){
+        if(this.value=="tu"){
+            var height=$(document).height();
+            $(".cover").css("height",height);
+            $("#box").css("display","none");
+            $(".tu").css("display","block");
+            //条形图
+            var myChart2 = echarts.init(document.getElementById('main_2'));
+            option = {
+                title: {
+                    text: '汇总报表'
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'cross',
+                        label: {
+                            backgroundColor: '#6a7985'
+                        }
+                    }
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        dataView: {readOnly: false},
+                        restore: {},
+                        saveAsImage: {}
+                    }
+                },
+                legend: {
+                    data:legend(),
+                    left:150,
+                    selected:legendData()
+
+                },
+                grid: {
+                    left: '3%',
+                    bottom: 70
+                },
+                dataZoom: [
+                    {
+                        show: true,
+                        realtime: true,
+                        start: 65,
+                        end: 85
+                    },
+                    {
+                        type: 'inside',
+                        realtime: true,
+                        start: 65,
+                        end: 85
+                    }
+                ],
+                xAxis: [
+                    {
+                        type: 'category',
+                        interval:0,
+                        boundaryGap: true,
+                        axisLabel:{
+                            interval:0,
+                            rotate:40
+                        },
+                        data:getCname()
+                    },
+                ],
+                yAxis: [
+                    {
+                        type: 'value'
+                    }
+                ],
+                series:barData()
+            }
+
+            myChart2.setOption(option);
+            window.onresize = myChart2.resize;
+        }else if(this.value=="table"){
+            var height=$(document).height();
+            $(".cover").css("height",height);
+            $("#box").css("display","block");
+            $(".tu").css("display","none");
+
+        }
+    })
+
+    //关闭饼图
+    $(".cover>div>a").click(function(){
+        $(".cover").fadeOut();
+    })
+    //饼图
+    $(function(){
+        $("#box>thead>tr>th:eq(0),#box>thead>tr>th:eq(1),#box>thead>tr>th:eq(2)").unbind("click")
+    })
+
+    $("#box>thead>tr>th").click(function(){
+        var height=$(document).height();
+        $(".cover").css("height",height);
+        $(".cover").css("display","block");
+        $("#bing").css("display","block");
+        var idx=$(this).index();
+        var data=getTable();
+        var cname=getCname();
+        var bdata=data[idx].slice(1,data[idx].length);
+        var bdata_pbj=[];
+        for(var i=0;i<bdata.length&cname.length;i++){
+            bdata_pbj.push({value:parseFloat(bdata[i]),name:cname[i]})
+        }
+        var myChart1 = echarts.init(document.getElementById('bing'));
+        option = {
+            title :{
+                text: data[idx-0][0],
+                x:'center'
+            },
+            tooltip :{
+                trigger: 'item'
+            },
+            legend:{
+                orient: 'vertical',
+                left: 'left',
+                top:100,
+                data:data[1].slice(1,data[1].length)
+            },
+            series : [
+                {
+                    type: 'pie',
+                    radius : '55%',
+                    center: ['65%', '55%'],
+                    data:bdata_pbj,
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        };
+
+        myChart1.setOption(option);
+        window.onresize = myChart1.resize;
+    })
+
+</script>
+</body>
+</html>

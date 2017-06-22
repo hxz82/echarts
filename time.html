@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<select name="" id="sel_time" >
+    <option value="table">表格</option>
+    <option value="xian">折线图</option>
+</select>
+<div  id="main_2" style="width:100%;height: 800px;display: none"></div>
+<table id="time" class="kv-grid-table table table-bordered table-striped kv-table-wrap"><thead><tr><th class="kv-align-center kv-align-middle" style="width:3.08%;">#</th><th style="width:5.97%;">名称</th><th style="width:5.37%;">新增人数</th><th style="width:3.32%;">DAU</th><th style="width:5.37%;">付费人数</th><th style="width:5.31%;">付费金额</th><th style="width:7.36%;">新增付费人数</th><th style="width:7.36%;">新增付费金额</th><th style="width:4.28%;">付费率</th><th style="width:3.8%;">ARPU</th><th style="width:4.34%;">ARPPU</th><th style="width:4.34%;">3日LTV</th><th style="width:4.34%;">7日LTV</th><th style="width:4.89%;">14日LTV</th><th style="width:4.95%;">30日LTV</th><th style="width:5.37%;">次日留存</th><th style="width:4.95%;">3日留存</th><th style="width:4.95%;">7日留存</th><th style="width:5.49%;">14日留存</th><th style="width:5.19%;">30日留存</th></tr></thead><tbody><tr><td class="kv-align-center kv-align-middle" style="width:50px;">1</td><td>2017-05-02</td><td>1250</td><td>7817</td><td>641</td><td>42725.76</td><td>106</td><td>8285.12</td><td>8.20%</td><td>5.47</td><td>66.65</td><td>19.27</td><td>27.73</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td>32.80%</td><td>25.28%</td><td>13.52%</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">2</td><td>2017-05-03</td><td>1488</td><td>8158</td><td>720</td><td>47338.08</td><td>133</td><td>8395.28</td><td>8.83%</td><td>5.80</td><td>65.75</td><td>10.31</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td>32.59%</td><td>25.07%</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">3</td><td>2017-05-04</td><td>1315</td><td>8141</td><td>709</td><td>56790.88</td><td>118</td><td>7310</td><td>8.71%</td><td>6.98</td><td>80.10</td><td>10.53</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td>30.34%</td><td>26.46%</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">4</td><td>2017-05-05</td><td>857</td><td>7837</td><td>974</td><td>89347.92</td><td>87</td><td>2132.48</td><td>12.43%</td><td>11.40</td><td>91.73</td><td>4.52</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td>32.79%</td><td>24.50%</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">5</td><td>2017-05-06</td><td>787</td><td>7773</td><td>775</td><td>61390.4</td><td>59</td><td>1044.48</td><td>9.97%</td><td>7.90</td><td>79.21</td><td>2.67</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td>30.75%</td><td>16.52%</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">6</td><td>2017-05-07</td><td>1019</td><td>7946</td><td>704</td><td>49403.36</td><td>107</td><td>2477.92</td><td>8.86%</td><td>6.22</td><td>70.18</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td>20.61%</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr><tr><td class="kv-align-center kv-align-middle" style="width:50px;">7</td><td>2017-05-08</td><td>198</td><td>5157</td><td>288</td><td>13134.88</td><td>12</td><td>1610.24</td><td>5.58%</td><td>2.55</td><td>45.61</td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td><td><span class="not-set">N/A</span></td></tr></tbody></table>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="http://cdn.bootcss.com/echarts/3.5.0/echarts.js"></script>
+<script src="js/time.js"></script>
+<script>
+    //获取表格中的数据
+    function getTable(){
+        var mytable = document.getElementById("time");
+        var rows=mytable.rows.length;
+        var data = [];
+        for(var i=0;i<rows; i++){
+            for(var j=0,cells=mytable.rows[i].cells.length; j<cells; j++){
+                if(!data[j]){
+                    data[j] = new Array();
+                }
+                data[j][i] = mytable.rows[i].cells[j].innerHTML;
+            }
+        }
+        return data;
+    }
+    //X轴数据
+    function getTime(){
+        var data=getTable();
+        var tname=data[1].slice(1,data[1].length);
+        return tname;
+    }
+    //去除百分号
+    function remove(){
+        var num=[];
+        var data=getTable();
+        for(var i=0;i<data.length;i++){
+            for(var j=0;j<data[i].length;j++){
+                if(!num[i]){
+                    num[i] = new Array();
+                }
+                num[i][j]=parseFloat(data[i][j])
+            }
+        }
+        return num;
+    }
+    //生成折线图数据
+    function lineData(){
+        var data=getTable();
+        var num=remove();
+        var sers=[];
+        for(var i=0;i<data.length;i++){
+            if(i>=2){
+                sers.push({
+                    name:data[i][0],
+                    type:"line",
+                    data:num[i].slice(1,num[i].length)
+                })
+            }
+        }
+        return sers
+    }
+    //图例名称
+    function legend(){
+        var end=[];
+        var data=getTable();
+        for(var i=0;i<data.length;i++){
+            if(i>=2){
+                end.push(data[i][0])
+            }
+        }
+        return end;
+    }
+
+
+    //图例选中状态
+    function legendChose(){
+        var chose={};
+        var data=getTable();
+        for(var i=0;i<data.length;i++){
+            if(i>=2){
+                chose[data[i][0]]=false;
+                chose[data[2][0]]=true;
+            }
+        }
+        return chose;
+    }
+
+    //折线图
+    $("#sel_time").change(function(){
+        if(this.value=="xian"){
+            $("#main_2").css("display","block")
+            $("#time").css("display","none")
+            var myChart2 = echarts.init(document.getElementById('main_2'));
+            option = {
+                title: {
+                    text: ''
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'cross',
+                        label: {
+                            backgroundColor: '#6a7985'
+                        }
+                    }
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        dataView: {readOnly: false},
+                        restore: {},
+                        saveAsImage: {}
+                    }
+                },
+                legend: {
+                    data:legend(),
+                    left:150,
+                    selected:legendChose()
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        boundaryGap: false,
+                        data:getTime()
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value'
+                    }
+                ],
+                series:lineData()
+            }
+            myChart2.setOption(option);
+            window.onresize = myChart2.resize;
+        }else if(this.value=="table"){
+            $("#main_2").css("display","none");
+            $("#time").css("display","block")
+        }
+    })
+
+</script>
+</body>
+</html>
